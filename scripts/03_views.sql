@@ -19,12 +19,12 @@ FROM venda
 GROUP BY data
 ORDER BY data DESC;
 
--- Clientes que Mais Gastam
 CREATE VIEW VIEW_RANKING_CLIENTES AS
-SELECT c.nome, SUM(v.total) AS total_gasto
+SELECT u.nome, SUM(v.total) AS total_gasto
 FROM venda v
-JOIN cliente c ON v.id_cliente = c.id
-GROUP BY c.nome
+JOIN usuario u ON v.id_vendedor = u.id
+WHERE u.cargo = 'CLIENTE'
+GROUP BY u.nome
 ORDER BY total_gasto DESC;
 
 -- Alerta de Estoque Crítico 

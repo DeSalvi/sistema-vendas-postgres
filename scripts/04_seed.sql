@@ -1,8 +1,12 @@
 -- Inserção de Usuários
 INSERT INTO usuario (nome, senha, email, cargo) VALUES 
-('Alice Oliveira', 'hash_senha_123', 'alice.vendas@empresa.com', 'Vendedor'),
-('Bruno Souza', 'hash_senha_456', 'bruno.gerente@empresa.com', 'Gerente'),
-('Carlos Lima', 'hash_senha_789', 'carlos.vendas@empresa.com', 'Vendedor');
+('Alice Oliveira', 'hash_senha_123', 'alice.vendas@empresa.com', 'VENDEDOR'),
+('Bruno Souza', 'hash_senha_456', 'bruno.gerente@empresa.com', 'GERENTE'),
+('Carlos Lima', 'hash_senha_789', 'carlos.vendas@empresa.com', 'VENDEDOR');
+('Mariana Costa', 'hash_senha_001', 'mariana.cliente@empresa.com', 'CLIENTE'),
+('João Pereira', 'hash_senha_002', 'joao.cliente@empresa.com', 'CLIENTE'),
+('Fernanda Alves', 'hash_senha_003', 'fernanda.cliente@empresa.com', 'CLIENTE'),
+('Ricardo Mendes', 'hash_senha_004', 'ricardo.cliente@empresa.com', 'CLIENTE');
 
 -- Inserção de Produtos
 INSERT INTO produto (nome, descricao, valor) VALUES 

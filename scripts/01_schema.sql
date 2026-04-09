@@ -7,9 +7,11 @@ CREATE TABLE usuario (
     email VARCHAR(155) UNIQUE,
     ativo BOOLEAN DEFAULT TRUE,
     cargo VARCHAR(50),
+   
+    CONSTRAINT cargo_valido
+    CHECK (cargo IN ('CLIENTE', 'VENDEDOR', 'GERENTE')),
 
     CONSTRAINT email_formato_invalido
-	
     CHECK (email ~ '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
 );
 
